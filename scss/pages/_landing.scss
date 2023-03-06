@@ -1,0 +1,10 @@
+.border-bottom-primary {
+    border-bottom: 20px solid $clr-primary;
+}
+
+.banner {
+    background-image: url("/img/banner.jpg");
+    background-repeat: no-repeat; //look up
+    background-size: cover; //look up
+    height: 80vh;
+}
