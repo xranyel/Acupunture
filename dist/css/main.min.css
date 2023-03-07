@@ -26,6 +26,7 @@ a {
 }
 
 .banner {
+  padding: 4rem 0;
   background-image: url("/img/banner.jpg");
   background-color: gray;
   background-blend-mode: multiply;
@@ -57,10 +58,123 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 2rem;
 }
+@media screen and (max-width: 48rem) {
+  .services__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+
+.booknow {
+  padding: 3rem 0;
+}
+.booknow h2 {
+  font-size: 2.5rem;
+}
+
+.about {
+  padding: 6rem 0;
+  color: #3d4045;
+}
+.about__wrapper {
+  gap: 5rem;
+}
+@media screen and (max-width: 48rem) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+}
+.about p {
+  font-size: 21px;
+}
+.about h2 {
+  font-size: 2rem;
+}
+
+.reviews {
+  padding: 6rem 0;
+  color: #3d4045;
+}
+.reviews__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5rem;
+}
+@media screen and (max-width: 48rem) {
+  .reviews__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+.reviews hr {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.faqs {
+  padding: 6rem 0;
+}
+.faqs h1 {
+  font-size: 2rem;
+}
+
+.location {
+  padding: 6rem 0;
+}
+.location__wrapper {
+  gap: 5rem;
+}
+@media screen and (max-width: 48rem) {
+  .location__wrapper {
+    flex-direction: column;
+  }
+  .location__wrapper iframe {
+    width: auto;
+    order: 1;
+  }
+}
+.location h1 {
+  font-size: 2rem;
+  line-height: 40px;
+}
+.location h3 {
+  font-weight: 600;
+  line-height: 25px;
+}
+.location hr {
+  margin: 2rem 0;
+  border: 1px solid #e85d64;
+}
+
+.footer {
+  padding: 3rem 0;
+}
+@media screen and (max-width: 48rem) {
+  .footer ul {
+    flex-direction: column;
+    gap: 0.7rem;
+    font-weight: 700;
+  }
+  .footer p {
+    display: none;
+  }
+  .footer h6 {
+    text-align: left;
+  }
+}
+.footer h6 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer ul li a {
+  color: #f2f2f2;
+}
+
 .bg--primary {
   background-color: #e85d64;
 }
@@ -143,6 +257,27 @@ a {
 }
 .btn.bg--gray:hover {
   background: #25272a;
+}
+
+.bg--whitegray {
+  background-color: #f8f8f8;
+}
+
+.text--whitegray {
+  color: #f8f8f8;
+}
+
+.btn.bg--whitegray {
+  padding: 0.5rem 3rem;
+  color: #f2f2f2;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-radius: 5rem;
+  display: inline-block;
+  background: #f8f8f8;
+}
+.btn.bg--whitegray:hover {
+  background: #dfdfdf;
 }
 
 .text--center {

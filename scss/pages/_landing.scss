@@ -1,8 +1,12 @@
 .border-bottom-primary {
     border-bottom: 20px solid $clr-primary;
+    // @include mediaQuery () {
+    //     border-bottom: 20px solid blue;                          mostly sa wrapper mag include ng responsive
+    // }
 }
 
 .banner {
+    padding: 4rem 0;
     background-image: url("/img/banner.jpg");
     background-color: gray;
     background-blend-mode: multiply; //look up
@@ -34,8 +38,108 @@
     color: $clr-gray;
     &__wrapper {
         @include grid(3, 2rem);
-        @include mediaQuery();
-            @include grid(1, 2rem);        
+
+        @include mediaQuery(){
+            @include grid(1, 2rem);
+        }
     }
 }
-    
+
+.booknow {
+    padding: 3rem 0;
+    h2 {
+        font-size: 2.5rem;
+    }
+}
+
+.about {
+    padding: 6rem 0;
+    color: $clr-gray;
+    &__wrapper {
+        gap: 5rem;
+        @include mediaQuery () {
+            flex-direction: column;
+        }
+    }
+    p {
+        font-size: 21px;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+.reviews {
+    padding: 6rem 0;
+    color: $clr-gray;
+    &__wrapper {
+        @include grid(3, 5rem);
+        
+        @include mediaQuery(){
+            @include grid(1, 2rem);
+        }
+    }
+    hr {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+}
+
+.faqs {
+    padding: 6rem 0;
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.location {
+    padding: 6rem 0;
+    &__wrapper {
+        gap: 5rem;
+        @include mediaQuery () {
+            flex-direction: column;
+            iframe {
+                width: auto;
+                order: 1;
+            }
+        }
+    }
+    h1 {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+    h3 {
+        font-weight: 600;
+        line-height: 25px;
+    }
+    hr {
+        margin: 2rem 0;
+        border: 1px solid $clr-primary;
+    }
+}
+
+.footer {
+    padding: 3rem 0;
+    @include mediaQuery () {
+        ul {
+            flex-direction: column;
+            gap: 0.7rem;
+            font-weight: 700;
+        }
+        p {
+            display: none;
+        }
+        h6 {
+            text-align: left;
+        }
+    }
+    h6 {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+
+.footer ul li a{
+    color: $clr-white;
+}
